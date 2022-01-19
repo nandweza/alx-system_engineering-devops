@@ -1,4 +1,4 @@
 #!/usr/bin/env ruby
 #match a 10 digit phone number
 
-\d{10}
+puts ARGV[0].scan(/\A\d{10}\z/).join
