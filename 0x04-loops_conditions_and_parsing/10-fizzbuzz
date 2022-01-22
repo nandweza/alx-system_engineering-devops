@@ -5,17 +5,19 @@
 #Displays Buzz when the number is a multiple of 5
 
 num=1
-while [ $num -eq 100 ]
+while [ $num -lt 101 ]
 do
-    num=$((num+1))
-    echo "$num"
-    for [ $num%3 = 0 && $num%5 =  0 ]
-    do
+    if [ $((num%15)) = 0 ]
+    then
         echo "FizzBuzz"
-        for [ $num%3 = 0 ]
-        do
-            echo "Fizz"
-            for [ $num%5 = 0 ]
-            do
-                echo "Buzz"
+    elif [ $((num%3)) = 0 ]
+    then
+        echo "Fizz"
+    elif [ $((num%5)) = 0 ]
+    then
+	echo "Buzz"
+    else
+	echo "$num"
+    fi
+    ((num++))
 done
