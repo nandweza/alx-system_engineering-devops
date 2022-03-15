@@ -1,4 +1,4 @@
-# set up a client ssh config file so that we connect to server without password.
+#set up a client ssh config file to connect to server without password.
 include stdlib
 file_line { 'Declare identity file':
   path    => '/etc/ssh/ssh_config',
