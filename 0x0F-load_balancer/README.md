@@ -10,7 +10,7 @@
 <br>
 <ul>
 <li><a href="https://alx-intranet.hbtn.io/concepts/46">Load balancer</a></li>
-<li><a> href="https://alx-intranet.hbtn.io/concepts/68">Web stack debugging</a></li>
+<li><a href="https://alx-intranet.hbtn.io/concepts/68">Web stack debugging</a></li>
 </ul>
 <br>
 <h2>Resources</h2>
