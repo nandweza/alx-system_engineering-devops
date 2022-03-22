@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Configures a new Ubuntu server with a HAproxy load-balancer
+sudo apt-get -y install --no-install-recommends software-properties-common
+sudo add-apt-repository -y ppa:vbernat/haproxy-2.5
+sudo apt-get -y update
+sudo apt-get -y install haproxy=2.5.\*
+sed -i '/errorfile 504/a listen alflix' /etc/haproxy/haproxy.cfg
+sed -i '/listen alflix/a         bind :80' /etc/haproxy/haproxy.cfg
+sed -i '/bind :80/a         mode http' /etc/haproxy/haproxy.cfg
+sed -i '/mode http/a         server 1899-web-01 44.197.235.95:80 check' /etc/haproxy/haproxy.cfg
+sed -i '/server 1899-web-01 44.197.235.95:80 check/a         server 1899-web-02 3.226.122.46:80 check' /etc/haproxy/haproxy.cfg
+sed -i '/#EXTRAOPTS="-de -m 16"/a ENABLED=1' /etc/default/haproxy
+service haproxy start
