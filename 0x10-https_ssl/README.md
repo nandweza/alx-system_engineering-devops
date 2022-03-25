@@ -1,4 +1,5 @@
 <h1>0x10. HTTPS SSL</h1>
+<hr>
 <br>
 <img src="https://s3.amazonaws.com/intranet-projects-files/holbertonschool-sysadmin_devops/276/FlhGPEK.png">
 <br>
