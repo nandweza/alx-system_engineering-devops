@@ -1,0 +1,21 @@
+listen alflix
+       bind :80
+       mode http
+       balance roundrobin
+       server 1899-web-01 44.197.235.95:80 check
+       server 1899-web-02 3.226.122.46:80 check
+
+frontend www-http
+       bind :80
+       reqadd X-Forwarded-Proto:\ http
+       default_backend web_backend
+
+frontend www-https
+       bind :443 ssl crt /etc/haproxy/ssl/www.alflix.tech.pem
+       reqadd X-Forwarded-Proto:\ https
+       default_backend web_backend
+
+backend web_backend
+   redirect scheme https if !{ ssl_fc }
+   server 1899-web-01    44.197.235.95:80 check
+   server 1899-web-02    3.226.122.46:80 check
