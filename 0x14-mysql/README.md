@@ -2,8 +2,8 @@
 <br>
 <h2>Concepts</h2>
 <br>
-<a href="https://alx-intranet.hbtn.io/concepts/49">Database administration</a>
-<a href="https://alx-intranet.hbtn.io/concepts/68">Web stack debugging</a>
+<a href="https://alx-intranet.hbtn.io/concepts/49">Database administration</a><br>
+<a href="https://alx-intranet.hbtn.io/concepts/68">Web stack debugging</a><br>
 <a href="https://alx-intranet.hbtn.io/concepts/100002">[How to] Install mysql 5.7</a>
 <br>
 <img src="https://s3.amazonaws.com/intranet-projects-files/holbertonschool-sysadmin_devops/280/KkrkDHT.png">
