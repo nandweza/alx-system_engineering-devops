@@ -31,7 +31,7 @@ defaults
         timeout server  50000
 backend myservers
 	balance roundrobin
-	server 1899-web-01 34.75.9.253:80 check
+	server 1899-web-01 34.148.213.246:80 check
 	server 1899-web-02 34.139.144.122:80 check
 frontend myfrontend
 	bind :80
