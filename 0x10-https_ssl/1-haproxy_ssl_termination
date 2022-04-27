@@ -52,5 +52,5 @@ frontend alflix.tech-https-frontend
 
 backend alflix.tech_backend
    balance roundrobin
-   server 1899-web-01    44.197.235.95:80 check
-   server 1899-web-02    3.226.122.46:80 check
+   server 1899-web-01    34.148.213.246:80 check
+   server 1899-web-02    34.139.144.122:80 check
